@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nueva Correspondencia</title>
+</head>
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4;">
+
+<table align="center" width="600" cellpadding="0" cellspacing="0"
+       style="background-color: #ffffff; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+    <tr>
+        <td style="background-color: #007bff; color: #ffffff; padding: 15px; text-align: center; border-radius: 8px 8px 0 0; font-size: 18px;">
+            📩 <strong>Nueva Correspondencia - <span th:text="${correspondenceDepartment}"></span></strong>
+        </td>
+    </tr>
+    <tr>
+        <td style="padding: 20px;">
+            <p><strong>De:</strong> <span th:text="${sender}"></span></p>
+            <p><strong>Para:</strong> <span th:text="${#strings.listJoin(recipients, ', ')}"></span></p>
+            <p><strong>Asunto:</strong> <span th:text="${subject}"></span></p>
+            <p><strong>Fecha de radicación:</strong> <span th:text="${filingDate}"></span></p>
+            <p style="color: red;"><strong>Mensaje:</strong></p>
+            <p th:text="${text}" style="background-color: #f8f9fa; padding: 10px; border-left: 4px solid #007bff;"></p>
+            <p><strong>Ver Correspondencia:</strong> <a href="{{ url }}">{{ url }}</a></p>
+
+            {% if attachments %}
+            <p><strong>Archivos Adjuntos:</strong></p>
+            <ul>
+                {% for file in attachments %}
+                <li>{{ file }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            <p>Por favor, revisa esta correspondencia lo antes posible.</p>
+
+            <div style="text-align: center; margin-top: 20px;">
+                <a th:href="@{${url}}"
+                   style="background-color: #007bff; color: #ffffff; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-size: 16px;">
+                    Ver Correspondencia
+                </a>
+            </div>
+
+            <p style="text-align: center; font-size: 12px; color: #888888; margin-top: 20px;">
+                Este es un mensaje automático. Por favor, no responda a este correo.
+            </p>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>

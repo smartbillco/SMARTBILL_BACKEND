@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restablecimiento de Contraseña</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 30px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            background-color: #e3e3e3; /* Un tono más oscuro */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+            text-align: left;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        p {
+            color: #555;
+            font-size: 16px;
+        }
+
+        .btn-reset {
+            background-color: #0056b3 !important; /* Azul más oscuro */
+            color: white !important;
+            padding: 12px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .btn-reset:hover {
+            background-color: #003f80 !important; /* Azul aún más oscuro al pasar el mouse */
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #777;
+        }
+
+        .footer a {
+            color: #0056b3;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <img src="../../mc.jpg" alt="SmartBill Logo" class="logo">
+
+    <div class="card">
+        <h2>Restablecimiento de Contraseña</h2>
+        <p>Hola <strong>Estimado usuario</strong>,</p>
+        <p>Recibimos una solicitud para restablecer tu contraseña en <strong>SmartBill</strong>.</p>
+        <p>Si no realizaste esta solicitud, simplemente puedes ignorar este correo. De lo contrario, haz clic en el
+            botón a continuación para restablecer tu contraseña.</p>
+
+        <a href="http://localhost:4200/forgot/2c73c618-8f77-462f-9a3a-48f97ade99c2" class="btn-reset">
+            Restablecer Contraseña
+        </a>
+
+        <p>Si tienes algún problema, también puedes copiar y pegar la siguiente URL en tu navegador:</p>
+        <p><a href="http://localhost:4200/forgot/2c73c618-8f77-462f-9a3a-48f97ade99c2" target="_blank">
+            http://localhost:4200/forgot/2c73c618-8f77-462f-9a3a-48f97ade99c2
+        </a></p>
+
+        <p>¡Gracias por usar SmartBill!</p>
+        <p>Atentamente,</p>
+        <p><strong>El equipo de SmartBill!</strong></p>
+        <div class="footer">
+            <p>Si necesitas ayuda, contacta con nosotros: <a
+                    href="mailto:support@smartbill.com.co">support@smartbill.com.co</a></p>
+            <p>© 2024 SmartBill - Todos los derechos reservados.</p>
+            <p>Cartagena, Colombia</p>
+            <p><a href="#">Visítanos</a></p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
